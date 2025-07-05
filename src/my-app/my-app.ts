@@ -1,13 +1,13 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import page from 'page';
-import viteLogo from './assets/vite-logo.png';
+import viteLogo from '../assets/vite-logo.png';
 
-import './pages/home-page/home-page.ts';
-import './pages/admin-page/admin-page.ts';
-import './pages/not-found-page/not-found-page.ts';
-import './pages/admin-login/admin-login.ts';
-import './pages/items-page/items-page.ts';
+import '../pages/home-page/home-page';
+import '../pages/admin-page/admin-page';
+import '../pages/not-found-page/not-found-page';
+import '../pages/admin-login/admin-login';
+import '../pages/items-page/items-page';
 
 import myAppStyles from './my-app.scss?inline';
 
@@ -104,11 +104,6 @@ export class MyApp extends LitElement {
     }
   }
 
-  private _handleApiLinkClick(e: Event) {
-    e.preventDefault();
-    this._fetchDataFromPHP();
-  }
-
   private _navigate(path: string, e: Event) {
     e.preventDefault();
     page.show(path);
@@ -138,7 +133,6 @@ export class MyApp extends LitElement {
           <a href="/" @click=${(e: Event) => this._navigate('/', e)}>Home</a>
           <a href="/items" @click=${(e: Event) => this._navigate('/items', e)}>Items</a>
           <a href="/admin" @click=${(e: Event) => this._navigate('/admin', e)}>Admin</a>
-          <a href="/api/data" @click=${this._handleApiLinkClick}>Test API</a>
         </nav>
       </header>
 

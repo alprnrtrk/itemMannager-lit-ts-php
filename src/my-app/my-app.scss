@@ -1,4 +1,4 @@
-@use './styles/general-settings' as *;
+@use '../styles/general-settings' as *;
 
 :host {
     display: flex;
@@ -9,7 +9,7 @@
     font-size: 1rem;
     color: $vscode-text-color;
     background-color: $vscode-bg-primary;
-    max-height: 100vh;
+    height: 100vh;
     box-sizing: border-box;
     padding: $spacing-md;
     overflow: auto;
