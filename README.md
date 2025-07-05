@@ -1,5 +1,3 @@
-# my-lit-php-app
-
 # 🚀 itemManager-lit-ts-php: Modern Frontend Meets Versatile Backend
 
 ## 🌟 Vision: "Develop Modern, Run Authentic"
