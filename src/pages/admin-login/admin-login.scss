@@ -1,0 +1,72 @@
+@use '../../styles/general-settings' as *;
+
+.login-container {
+    background-color: $vscode-bg-secondary;
+    border: 1px solid $vscode-border-color;
+    border-radius: $spacing-sm;
+    padding: $spacing-lg;
+    margin-top: $spacing-lg;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: $vscode-link-color;
+    font-size: $spacing-lg;
+    margin-bottom: $spacing-lg;
+}
+
+.input-group {
+    margin-bottom: $spacing-md;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: $spacing-sm;
+    color: $vscode-text-color;
+    font-size: 0.9rem;
+}
+
+input[type="password"] {
+    width: calc(100% - 1.5rem);
+    padding: $spacing-sm;
+    background-color: $vscode-api-pre-bg;
+    border: 1px solid $vscode-border-color;
+    border-radius: 0.25rem;
+    color: $vscode-text-color;
+    font-family: $vscode-code-font;
+    font-size: 1rem;
+    outline: none;
+
+    &:focus {
+        border-color: $vscode-link-color;
+        box-shadow: 0 0 0 2px rgba($vscode-link-color, 0.2);
+    }
+}
+
+button {
+    background-color: $vscode-button-bg;
+    color: $vscode-button-text;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+
+    &:hover {
+        background-color: $vscode-button-hover-bg;
+    }
+}
+
+.error-message {
+    color: #e06c75;
+    font-size: 0.85rem;
+    margin-top: -$spacing-sm;
+    margin-bottom: $spacing-md;
+}

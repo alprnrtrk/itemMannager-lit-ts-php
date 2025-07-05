@@ -1,0 +1,30 @@
+{
+  "name": "my-lit-php-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:php": "php -S 127.0.0.1:8000 -t public",
+    "watch:ts": "tsc --watch --preserveWatchOutput",
+    "dev": "vite",
+    "start": "concurrently \"npm run start:php\" \"npm run watch:ts\" \"npm run dev\"",
+    "build": "vite build && node copy-php.js",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/page": "^1.11.9",
+    "concurrently": "^8.2.2",
+    "lit": "^3.1.4",
+    "sass": "^1.89.2",
+    "typescript": "^5.5.3",
+    "vite": "^7.0.2"
+  },
+  "dependencies": {
+    "page": "^1.3.7"
+  }
+}

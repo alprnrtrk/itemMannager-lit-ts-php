@@ -1,0 +1,224 @@
+@use '../../styles/general-settings' as *;
+
+.admin-dashboard {
+    padding: $spacing-md;
+    background-color: $vscode-bg-secondary;
+    border: 1px solid $vscode-border-color;
+    border-radius: $spacing-sm;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: $spacing-md auto;
+    text-align: left;
+}
+
+h2 {
+    color: $vscode-link-color;
+    font-size: $spacing-lg;
+    margin-bottom: $spacing-md;
+}
+
+p {
+    margin-bottom: $spacing-md;
+    color: $vscode-text-color;
+}
+
+.add-item-section,
+.manage-items-section {
+    margin-top: $spacing-lg;
+    padding: $spacing-md;
+    background-color: $vscode-api-section-bg;
+    border: 1px solid $vscode-border-color;
+    border-radius: $spacing-sm;
+}
+
+h3 {
+    color: $vscode-text-color;
+    font-size: 1.2rem;
+    margin-bottom: $spacing-md;
+    border-bottom: 1px solid $vscode-border-color;
+    padding-bottom: $spacing-sm;
+}
+
+.form-group {
+    margin-bottom: $spacing-md;
+}
+
+label {
+    display: block;
+    margin-bottom: $spacing-sm;
+    color: $vscode-text-color;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+    width: calc(100% - #{$spacing-md});
+    padding: $spacing-sm;
+    background-color: $vscode-api-pre-bg;
+    border: 1px solid $vscode-border-color;
+    border-radius: 0.25rem;
+    color: $vscode-text-color;
+    font-family: $vscode-code-font;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus {
+        border-color: $vscode-link-color;
+        box-shadow: 0 0 0 2px rgba($vscode-link-color, 0.2);
+    }
+}
+
+input[type="file"] {
+    padding: 0.5rem;
+    background-color: $vscode-bg-secondary;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.image-preview {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: $spacing-sm;
+    border: 1px solid $vscode-border-color;
+    border-radius: 0.25rem;
+    display: block;
+    object-fit: cover;
+}
+
+button[type="submit"] {
+    background-color: $vscode-button-bg;
+    color: $vscode-button-text;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-top: $spacing-sm;
+    width: auto;
+    margin-right: $spacing-sm;
+
+    &:hover {
+        background-color: $vscode-button-hover-bg;
+    }
+}
+
+.cancel-button {
+    background-color: $vscode-button-secondary-bg;
+    color: $vscode-button-secondary-text;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-top: $spacing-sm;
+    width: auto;
+
+    &:hover {
+        background-color: $vscode-button-secondary-hover-bg;
+    }
+}
+
+
+.feedback-message {
+    padding: $spacing-sm;
+    border-radius: 0.25rem;
+    margin-top: $spacing-md;
+    font-weight: bold;
+}
+
+.feedback-message.success {
+    background-color: rgba(60, 180, 110, 0.2);
+    color: #3cb46e;
+    border: 1px solid #3cb46e;
+}
+
+.feedback-message.error {
+    background-color: rgba(224, 108, 117, 0.2);
+    color: #e06c75;
+    border: 1px solid #e06c75;
+}
+
+.manage-items-section {
+    margin-top: $spacing-xl;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    margin-top: $spacing-md;
+}
+
+.item-list-card {
+    display: flex;
+    align-items: center;
+    background-color: $vscode-bg-primary;
+    border: 1px solid $vscode-border-color;
+    border-radius: $spacing-xs;
+    padding: $spacing-sm;
+    gap: $spacing-sm;
+}
+
+.item-list-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.125rem;
+    border: 1px solid darken($vscode-border-color, 10%);
+}
+
+.item-list-details {
+    flex-grow: 1;
+}
+
+.item-list-name {
+    font-weight: bold;
+    color: $vscode-text-color;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.item-list-price {
+    color: lighten($vscode-text-color, 15%);
+    font-size: 0.9rem;
+}
+
+.item-list-actions {
+    display: flex;
+    gap: $spacing-xs;
+}
+
+.edit-button,
+.delete-button {
+    background-color: $vscode-button-bg;
+    color: $vscode-button-text;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+    font-size: 0.85rem;
+
+    &:hover {
+        background-color: $vscode-button-hover-bg;
+    }
+}
+
+.delete-button {
+    background-color: #d14d4d;
+
+    &:hover {
+        background-color: #e06c75;
+    }
+}

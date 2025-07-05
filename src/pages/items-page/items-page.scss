@@ -1,0 +1,107 @@
+@use '../../styles/general-settings' as *;
+
+.items-container {
+    padding: $spacing-md;
+    background-color: $vscode-bg-secondary;
+    border: 1px solid $vscode-border-color;
+    border-radius: $spacing-sm;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: $spacing-md auto;
+    text-align: left;
+}
+
+h2 {
+    color: $vscode-link-color;
+    font-size: $spacing-lg;
+    margin-bottom: $spacing-lg;
+    text-align: center;
+}
+
+.status-message {
+    padding: $spacing-md;
+    text-align: center;
+    color: $vscode-text-color;
+}
+
+.status-message.error {
+    background-color: rgba(224, 108, 117, 0.2);
+    color: #e06c75;
+    border: 1px solid #e06c75;
+    border-radius: 0.25rem;
+}
+
+.status-message.no-items {
+    color: lighten($vscode-text-color, 20%);
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: $spacing-md;
+    justify-content: center;
+}
+
+.item-card {
+    background-color: $vscode-api-section-bg;
+    border: 1px solid $vscode-border-color;
+    border-radius: $spacing-sm;
+    overflow: hidden;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.item-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid $vscode-border-color;
+}
+
+.item-no-image {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darken($vscode-api-section-bg, 5%);
+    color: lighten($vscode-text-color, 30%);
+    font-size: 0.9rem;
+    border-bottom: 1px solid $vscode-border-color;
+}
+
+.item-details {
+    padding: $spacing-md;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    color: $vscode-link-color;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: $spacing-sm;
+}
+
+.item-description {
+    color: lighten($vscode-text-color, 10%);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: $spacing-md;
+    flex-grow: 1;
+}
+
+.item-price {
+    color: $vscode-text-color;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: $spacing-sm;
+}
